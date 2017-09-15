@@ -1,6 +1,6 @@
 # Wzz(Wo Zuo Zhu) 我做主
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 & [Yarn].
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 & [Yarn](https://yarnpkg.com).
 
 ## Development server
 
