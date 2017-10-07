@@ -5,5 +5,5 @@ package com.palygronud.service.inventory;
  * Date: 10/6/2017
  */
 
-public class DeviceService {
+public class RunbookService {
 }
