@@ -7,9 +7,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NavComponent implements OnInit {
   menuItems = [
-    'Heroes',
-    'Villains',
-    'Other'
+    'Inventory',
+    'Runbook',
+    'Map'
   ];
 
   ngOnInit() {

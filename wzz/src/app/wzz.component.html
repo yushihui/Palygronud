@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<mat-sidenav-container class="wzz-container">
+
+  <mat-sidenav #sidenav class="wzz-sidenav">
+    <wzz-side-nav>
+
+    </wzz-side-nav>
+  </mat-sidenav>
+
+  <div class="wzz-main-container">
+
+    <div class="wzz-header">
+
+      <mat-icon (click)="sidenav.open()" class="drawer">menu</mat-icon>
+    </div>
+  </div>
+
+</mat-sidenav-container>

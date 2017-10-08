@@ -23,10 +23,12 @@ public class WzzServer {
 
     public static void main(String[] args) {
         try {
-            logger.debug("The application is going to start...");
+
+            logger.debug("The wzz application is going to start...");
             SpringApplication.run(WzzServer.class, args);
+
         } catch (Exception e) {
-            logger.error("The application failed to start...");
+            logger.error("The wzz application failed to start...");
 
         }
 
