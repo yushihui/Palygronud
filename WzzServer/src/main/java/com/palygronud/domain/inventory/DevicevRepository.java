@@ -11,5 +11,6 @@ import java.util.List;
 
 public interface DevicevRepository extends MongoRepository<Device, String> {
 
-
+    Device findByMgmtIP(String mgmtIP);
 }
+
