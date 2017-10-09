@@ -4,7 +4,7 @@ This is a funny playground, paily grou nad, do whatever you can't do at work, Ju
 * Future First(new technology)
 * Mobile First(web client should be mobile friendly)
 * Cloud First(easy to deploy into cloud)
-at the sam time it should be
+## at the sam time it should be
 1. Easy Deploying(dockerlize)
 2. Easy scalization
 3. Platform independent
