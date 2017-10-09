@@ -3,7 +3,7 @@ This is a funny playground, paily grou nad, do whatever you can't do at work, Ju
 ## When you add A Feature, Please consider these suggestions
 * Future First(new technology)
 * Mobile First(web client should be mobile friendly)
-* Cloud First(easy to deploy into cloud)
+* Cloud First(easy to deploy into cloud(private or public))
 ### at the sam time it should be
 1. Easy Deploying(dockerlize)
 2. Easy scalization
