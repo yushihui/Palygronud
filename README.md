@@ -8,7 +8,7 @@ This is a funny playground, paily grou nad, do whatever you can't do at work, Ju
 1. Easy Deploying(dockerlize)
 2. Easy scalization
 3. Platform independent
-4. Easy Localization
+4. Easy Localization(or internationalization(user interface), we don't need to implement it right now, but we have to think about it at begining)
 
 
 
