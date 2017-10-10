@@ -4,6 +4,7 @@ import {NavComponent} from './nav/nav.component';
 import {MatListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SideNavComponent} from './side-nav/side-nav.component';
+import {NavService} from './nav.service';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import {SideNavComponent} from './side-nav/side-nav.component';
   ],
   exports: [NavComponent, SideNavComponent],
   declarations: [NavComponent, SideNavComponent],
-  providers: []
+  providers: [NavService]
 })
 export class CoreModule {
 }

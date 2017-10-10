@@ -9,7 +9,7 @@ const appRoutes: Routes = [
   //   outlet: 'popup'
   // },
   {
-    path: 'runbook',
+    path: 'runbooks',
     loadChildren: 'app/runbook/runbook.module#RunbookModule'
   }
   // {
