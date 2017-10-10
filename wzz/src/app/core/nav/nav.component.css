@@ -1,0 +1,12 @@
+.wzz-nav-link {
+  border-bottom: 3px solid transparent;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 55px;
+  padding: 3px 0 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #757575;
+  font-weight: 700;
+  margin-left: 60px;
+}

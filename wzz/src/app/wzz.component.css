@@ -20,3 +20,29 @@
   padding-top: 16px;
   padding-left: 24px;
 }
+
+mat-sidenav {
+  width: 240px;
+}
+
+.app-brand {
+  font-size: 1.15rem;
+  padding-top: 18px;
+  margin-left: 18px;
+  cursor: pointer;
+}
+
+wzz-nav {
+  padding: 0;
+  height: 56px;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  wzz-nav {
+    display: none;
+  }
+}

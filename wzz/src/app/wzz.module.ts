@@ -6,10 +6,17 @@ import {MatSidenavModule, MatButtonModule, MatIconModule} from '@angular/materia
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CoreModule} from './core/core.module';
 import {WzzComponent} from './wzz.component';
+import {WzzRoutingModule} from './wzz-routing.module';
+// import { RunbookComponent } from './runbook/runbook.component';
+// import { DevicesComponent } from './inventory/devices/devices.component';
+// import { RunbookDetailComponent } from './runbook/runbook-detail.component';
 
 @NgModule({
   declarations: [
     WzzComponent
+    // RunbookComponent,
+    // DevicesComponent,
+    // RunbookDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +26,8 @@ import {WzzComponent} from './wzz.component';
     MatButtonModule,
     MatIconModule,
     BrowserAnimationsModule,
-    CoreModule
+    CoreModule,
+    WzzRoutingModule
 
   ],
   providers: [],

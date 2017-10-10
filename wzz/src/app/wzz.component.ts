@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./wzz.component.css']
 })
 export class WzzComponent {
-  title = 'Really, Wzz works!';
+  brand = 'YANB';
 }

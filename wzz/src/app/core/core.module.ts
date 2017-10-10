@@ -5,6 +5,7 @@ import {MatListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SideNavComponent} from './side-nav/side-nav.component';
 
+
 @NgModule({
   imports: [
     CommonModule, // we use ngFor
