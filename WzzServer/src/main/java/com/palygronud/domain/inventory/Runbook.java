@@ -23,5 +23,6 @@ public class Runbook {
     private Date createdTime;
     private List<String> tags;
     private LastOpInfo lastOpInfo;
+    private List<RunbookNode> nodes;
 
 }

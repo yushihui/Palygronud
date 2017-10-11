@@ -2,7 +2,6 @@ package com.palygronud.domain.inventory;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.List;
 
 /**
  * Created by: Shihui

@@ -13,6 +13,7 @@ public enum TaskType {
     PING,
     TRACE,
     SNMP,
+    PATH,
     QAPP,
     COMPARE,
     NETWORKCHANGE,
