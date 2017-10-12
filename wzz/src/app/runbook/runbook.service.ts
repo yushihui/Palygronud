@@ -16,7 +16,8 @@ export class Runbook {
               public tags: string[],
               public createdTime: Date,
               public nodes: RunbookNode[],
-              public description: string) {
+              public description: string,
+              public shareType: RunbookShareType) {
   }
 
 }
@@ -43,4 +44,9 @@ export enum TaskType {
   DISCOVER,
   BUILDTOPO,
   RESTAPI
+}
+
+export enum RunbookShareType {
+  PRIVATE,
+  PUBLIC
 }

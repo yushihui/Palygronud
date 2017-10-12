@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './wzz.component.html',
   styleUrls: ['./wzz.component.css']
 })
+
 export class WzzComponent {
   brand = 'YANB';
 }

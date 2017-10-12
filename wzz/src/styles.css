@@ -19,3 +19,11 @@ wzz-root {
 mat-icon {
   cursor: pointer;
 }
+
+.p-l {
+  float: left;
+}
+
+.p-r {
+  float: right;
+}

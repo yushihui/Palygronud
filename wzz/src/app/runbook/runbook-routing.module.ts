@@ -1,7 +1,8 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {RunbookComponent} from './runbook.component';
-import {RunbookDetailComponent} from './runbook-detail.component';
+import {RunbookDetailComponent} from './runbook-detail/runbook-detail.component';
+
 
 const runbookRoutes: Routes = [
   {

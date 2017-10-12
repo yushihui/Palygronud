@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'wzz-runbook-detail',
+  selector: 'app-runbook-detail',
   templateUrl: './runbook-detail.component.html',
   styleUrls: ['./runbook-detail.component.css']
 })
