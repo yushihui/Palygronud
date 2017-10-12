@@ -15,7 +15,8 @@ export class Runbook {
               public name: string,
               public tags: string[],
               public createdTime: Date,
-              public nodes: RunbookNode[]) {
+              public nodes: RunbookNode[],
+              public description: string) {
   }
 
 }

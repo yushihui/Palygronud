@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RunbookRoutingModule} from './runbook-routing.module';
 import {RunbookComponent} from './runbook.component';
 import {RunbookDetailComponent} from './runbook-detail.component';
+import {RunbookCardComponent} from './runbook-card/runbook-card.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {RunbookDetailComponent} from './runbook-detail.component';
   ],
   declarations: [
     RunbookComponent,
-    RunbookDetailComponent
+    RunbookDetailComponent,
+    RunbookCardComponent
   ]
 })
 export class RunbookModule {
