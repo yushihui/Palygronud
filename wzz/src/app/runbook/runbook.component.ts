@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'wzz-runbook',
@@ -7,11 +8,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RunbookComponent implements OnInit {
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private router: Router) {
+
+  }
+
+  gotoRunbookDetail(runbookId: string) {
+    this.router.navigate(['detail/' + runbookId], {relativeTo: this.route});
   }
 
   ngOnInit() {
 
   }
+
 
 }
