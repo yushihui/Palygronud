@@ -6,6 +6,7 @@ package com.palygronud.domain.inventory;
  */
 
 import com.palygronud.domain.common.LastOpInfo;
+import com.palygronud.domain.common.RunbookShareType;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -24,5 +25,7 @@ public class Runbook {
     private List<String> tags;
     private LastOpInfo lastOpInfo;
     private List<RunbookNode> nodes;
+    private String description;
+    private RunbookShareType shareType;
 
 }
