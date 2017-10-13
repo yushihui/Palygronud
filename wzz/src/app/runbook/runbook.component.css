@@ -1,0 +1,24 @@
+.add-rb {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+.rr-l {
+  color: #555555;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 24px;
+  line-height: 40px;
+}
+
+.rb-top {
+  height: 48px;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.rb-top button {
+  min-width: 40px;
+  padding: 0 0px;
+}
