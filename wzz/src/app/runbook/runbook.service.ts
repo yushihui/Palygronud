@@ -7,15 +7,21 @@ export class RunbookService {
   constructor(private http: HttpClient) {
   }
 
+  getEmptyRunbook(): Runbook {
+    return new Runbook('admin', '', [], '', RunbookShareType.PUBLIC);
+  }
+
 }
 
 export class Runbook {
-  constructor(public id: string,
-              public createdBy: string,
-              public name: string,
+  public id: string;
+  public createdTime: Date;
+
+  // public nodes: RunbookNode[];
+
+  constructor(public name: string,
+              public contentYml: string,
               public tags: string[],
-              public createdTime: Date,
-              public nodes: RunbookNode[],
               public description: string,
               public shareType: RunbookShareType) {
   }
@@ -24,7 +30,7 @@ export class Runbook {
 
 export class RunbookNode {
   constructor(public name: string,
-              public taskType: TaskType) {
+              public provider: string) {
   }
 
 }

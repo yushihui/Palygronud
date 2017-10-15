@@ -4,7 +4,10 @@ import {RunbookRoutingModule} from './runbook-routing.module';
 import {RunbookComponent} from './runbook.component';
 import {RunbookCardComponent} from './runbook-card/runbook-card.component';
 import {RunbookDetailComponent} from './runbook-detail/runbook-detail.component';
-import {MatButtonModule, MatIconModule, MatRippleModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatInputModule, MatRippleModule, MatSlideToggleModule} from '@angular/material';
+import {RunbookService} from './runbook.service';
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 @NgModule({
@@ -13,13 +16,17 @@ import {MatButtonModule, MatIconModule, MatRippleModule} from '@angular/material
     RunbookRoutingModule,
     MatIconModule,
     MatRippleModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    MatInputModule,
+    MatSlideToggleModule
   ],
   declarations: [
     RunbookComponent,
     RunbookDetailComponent,
     RunbookCardComponent
-  ]
+  ],
+  providers: [RunbookService]
 })
 export class RunbookModule {
 }

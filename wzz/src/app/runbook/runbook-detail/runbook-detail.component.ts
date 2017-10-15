@@ -1,16 +1,21 @@
 import {Component, OnInit} from '@angular/core';
+import {Runbook, RunbookService} from '../runbook.service';
 
 @Component({
-  selector: 'app-runbook-detail',
+  selector: 'wzz-runbook-detail',
   templateUrl: './runbook-detail.component.html',
   styleUrls: ['./runbook-detail.component.css']
 })
 export class RunbookDetailComponent implements OnInit {
 
-  constructor() {
+
+  runbook: Runbook;
+
+  constructor(private runbookService: RunbookService) {
   }
 
   ngOnInit() {
+    this.runbook = this.runbookService.getEmptyRunbook();
   }
 
 }
