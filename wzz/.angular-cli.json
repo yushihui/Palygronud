@@ -23,7 +23,8 @@
         "lib/codemirror.css"
       ],
       "scripts": [
-        "lib/codemirror.js"
+        "lib/codemirror.js",
+        "lib/yaml.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
