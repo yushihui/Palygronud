@@ -16,6 +16,13 @@ export class RunbookDetailComponent implements OnInit {
 
   ngOnInit() {
     this.runbook = this.runbookService.getEmptyRunbook();
+    this.runbook.contentYml = `
+---
+# An example Runbook
+name: Martin D'vloper
+job: Developer
+skill: Elite
+employed: True`;
   }
 
 }

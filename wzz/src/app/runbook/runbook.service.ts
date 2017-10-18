@@ -16,8 +16,7 @@ export class RunbookService {
 export class Runbook {
   public id: string;
   public createdTime: Date;
-
-  // public nodes: RunbookNode[];
+  public nodes: RunbookNode[];
 
   constructor(public name: string,
               public contentYml: string,

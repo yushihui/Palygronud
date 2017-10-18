@@ -19,11 +19,10 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "lib/codemirror.css"
+        "styles.css"
       ],
       "scripts": [
-        "lib/codemirror.js",
+        "lib/ace.129.js",
         "lib/yaml.js"
       ],
       "environmentSource": "environments/environment.ts",

@@ -7,13 +7,14 @@
 }
 
 .yml-editor {
-  display: flex;
+  /*display: flex;*/
   min-height: 200px;
   white-space: pre-wrap;
-  background-color: hsla(0, 0%, 95%, .2);
-  border: .5px solid #dbdbdb;
+  /*background-color: hsla(0, 0%, 95%, .2);*/
+  /*border: .5px solid #dbdbdb;*/
   border-radius: 5px;
   padding: 12px 12px;
+  width: 100%;
 }
 
 .runbook-overview {
