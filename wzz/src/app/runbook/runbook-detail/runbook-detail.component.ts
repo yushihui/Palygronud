@@ -1,5 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {Runbook, RunbookService} from '../runbook.service';
+
+declare var ace: any;
 
 @Component({
   selector: 'wzz-runbook-detail',
@@ -7,22 +9,19 @@ import {Runbook, RunbookService} from '../runbook.service';
   styleUrls: ['./runbook-detail.component.css']
 })
 export class RunbookDetailComponent implements OnInit {
-
-
   runbook: Runbook;
+  editor: any;
 
-  constructor(private runbookService: RunbookService) {
+  constructor(private runbookService: RunbookService, private element: ElementRef) {
+
   }
 
   ngOnInit() {
     this.runbook = this.runbookService.getEmptyRunbook();
-    this.runbook.contentYml = `
----
-# An example Runbook
-name: Martin D'vloper
-job: Developer
-skill: Elite
-employed: True`;
+    const editorEle = this.element.nativeElement.querySelector('.yml-editor');
+    this.editor = ace.edit(editorEle);
+    // this.editor.setTheme('ace/theme/monokai');
+    this.editor.getSession().setMode('ace/mode/yaml');
   }
 
 }

@@ -23,7 +23,15 @@
       ],
       "scripts": [
         "lib/ace.129.js",
-        "lib/yaml.js"
+        "lib/yaml2json.js",
+        {
+          "input": "lib/theme-monokai.js",
+          "output": "theme-monokai"
+        },
+        {
+          "input": "lib/mode-yaml.js",
+          "output": "mode-yaml"
+        }
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
