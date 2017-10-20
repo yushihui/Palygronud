@@ -1,6 +1,6 @@
 package com.palygronud.domain.inventory;
 
-import com.palygronud.domain.common.TaskType;
+
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
@@ -12,5 +12,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class RunbookNode {
     private String name;
-    private TaskType taskType;
+    private String provider;
 }
