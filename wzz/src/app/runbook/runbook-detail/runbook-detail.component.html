@@ -2,15 +2,10 @@
   <div class="yml-container">
 
     <div class="yml-editor">
-      ---
-      # An example Runbook
-      name: Martin D'vloper
-      job: Developer
-      skill: Elite
-      employed: True
-
-      "function foo(items)"
     </div>
+    <span *ngIf="parseError">{{parseError|parserExceptionPipe}}</span>
+    <span>{{runbook.contentYml}}</span>
+    <span *ngIf="title">{{title}}</span>
   </div>
 
 

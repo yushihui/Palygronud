@@ -7,6 +7,7 @@ import {RunbookDetailComponent} from './runbook-detail/runbook-detail.component'
 import {MatButtonModule, MatIconModule, MatInputModule, MatRippleModule, MatSlideToggleModule} from '@angular/material';
 import {RunbookService} from './runbook.service';
 import {HttpClientModule} from '@angular/common/http';
+import {ParserExceptionPipePipe} from './parser-exception-pipe.pipe';
 
 
 
@@ -24,7 +25,8 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     RunbookComponent,
     RunbookDetailComponent,
-    RunbookCardComponent
+    RunbookCardComponent,
+    ParserExceptionPipePipe
   ],
   providers: [RunbookService]
 })
