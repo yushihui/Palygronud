@@ -22,9 +22,8 @@ export class RunbookDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.http.post('http://localhost:8080/inventory/runbooks/empty', null).subscribe(data => {
-      this.runbook.contentYaml = data['contentYaml'];
+    this.http.post<Runbook>('http://localhost:8080/inventory/runbooks/empty', null).subscribe(data => {
+      this.runbook = data;
       this.editor.getSession().setValue(this.runbook.contentYaml, 0);
     });
     const editorEle = this.element.nativeElement.querySelector('.yml-editor');

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Runbook} from './runbook.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'wzz-runbook',
@@ -9,7 +11,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 export class RunbookComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  public runbooks: Runbook[];
+
+  constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) {
 
   }
 
@@ -18,6 +22,9 @@ export class RunbookComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.http.get<Runbook[]>('http://localhost:8080/inventory/runbooks').subscribe(rbs => {
+      this.runbooks = rbs;
+    });
 
   }
 

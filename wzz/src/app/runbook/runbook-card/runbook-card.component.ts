@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Runbook} from '../runbook.service';
 
 @Component({
   selector: 'wzz-runbook-card',
@@ -7,10 +8,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RunbookCardComponent implements OnInit {
 
+  @Input() runbook: Runbook;
   constructor() {
   }
 
   ngOnInit() {
   }
+
 
 }

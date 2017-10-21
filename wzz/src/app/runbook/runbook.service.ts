@@ -33,6 +33,7 @@ export class Runbook {
   public nodes: RunbookNode[];
   public shareType: RunbookShareType;
   public name: string;
+  public createdBy: string;
   public contentYaml: string;
   public tags: string[];
   public description: string;

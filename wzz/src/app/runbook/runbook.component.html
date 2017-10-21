@@ -13,6 +13,16 @@
         <mat-icon aria-label="View in list">sort_by_alpha</mat-icon>
       </button>
     </div>
+    <div>
+      <mat-grid-list cols="4" rowHeight="260px">
+        <mat-grid-tile
+          *ngFor="let runbook of runbooks"
+          [colspan]="1">
+          <wzz-runbook-card [runbook]="runbook">
+          </wzz-runbook-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
   </div>
 
 
