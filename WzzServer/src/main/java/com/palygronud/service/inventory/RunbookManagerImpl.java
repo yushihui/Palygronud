@@ -34,7 +34,7 @@ public class RunbookManagerImpl implements RunbookManager {
 
     @Override
     public List<Runbook> getAllRunbooks() {
-        return null;
+        return runbookRepository.findAll();
     }
 
     @Override

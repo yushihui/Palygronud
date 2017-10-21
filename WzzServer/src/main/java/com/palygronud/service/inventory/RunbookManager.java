@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface RunbookManager {
 
-    static String YAML = String.join("\n"
+    String YAML = String.join("\n"
             , "---"
             , "# This is the Description"
             , "name: New Runbook"

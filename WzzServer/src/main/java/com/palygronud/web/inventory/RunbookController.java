@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/inventory/runbooks")
 @CrossOrigin(origins = "http://localhost:4200")
@@ -25,5 +27,11 @@ public class RunbookController {
     @RequestMapping(method = RequestMethod.POST, value = "empty")
     public Runbook createEmptyRunbook() {
         return runbookManager.createEmptyOne();
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(method = RequestMethod.GET, value = "")
+    public List<Runbook> getAllRunbooks() {
+        return runbookManager.getAllRunbooks();
     }
 }
