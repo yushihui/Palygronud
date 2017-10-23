@@ -1,5 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Runbook} from '../runbook.service';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Runbook, RunbookService} from '../runbook.service';
+import {HttpClient} from '@angular/common/http';
+import {ApiServer} from '../../core/api-server';
 
 @Component({
   selector: 'wzz-runbook-card',
@@ -9,11 +11,22 @@ import {Runbook} from '../runbook.service';
 export class RunbookCardComponent implements OnInit {
 
   @Input() runbook: Runbook;
-  constructor() {
+
+
+  constructor(private http: HttpClient, private apiServer: ApiServer, private runbookService: RunbookService) {
   }
 
   ngOnInit() {
   }
 
+  gotoDetails(): void {
+
+  }
+
+  delete(id: string): void {
+    this.http.delete(this.apiServer.API_RUNBOOK + '/' + id).subscribe(data => {
+      this.runbookService.deleteRunbookFromList(id);
+    });
+  }
 
 }

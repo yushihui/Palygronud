@@ -1,8 +1,10 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Runbook, RunbookService} from './runbook.service';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
+import {ApiServer} from '../core/api-server';
+import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'wzz-runbook',
@@ -10,15 +12,16 @@ import {Observable} from 'rxjs/Observable';
   styleUrls: ['./runbook.component.css']
 })
 
-export class RunbookComponent implements OnInit {
+export class RunbookComponent implements OnInit, OnDestroy {
+
 
   public runbooks: Runbook[];
   cols = 4;
   loading = true;
+  deteleSubscription: Subscription;
 
-  constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient, private runbookService: RunbookService) {
-
-    // console.log('window.innerHeight---' + window.innerWidth);
+  constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient, private runbookService: RunbookService,
+              private apiServer: ApiServer) {
     this.cols = this.runbookService.getColumns(window.innerWidth);
   }
 
@@ -27,11 +30,24 @@ export class RunbookComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.cols = this.runbookService.getColumns(window.innerHeight);
-    this.http.get<Runbook[]>('http://localhost:8080/inventory/runbooks').subscribe(rbs => {
+    this.onRunbookDeleted();
+    this.http.get<Runbook[]>(this.apiServer.API_RUNBOOK).subscribe(rbs => {
       this.loading = false;
       this.runbooks = rbs;
     });
+  }
+
+  onRunbookDeleted(): void {
+    this.deteleSubscription = this.runbookService.runbookDeleted$.subscribe(
+      runbookId => {
+        const rbIndex = this.runbooks.findIndex(r => {
+          return r.id === runbookId;
+        });
+        if (rbIndex > -1) {
+          this.runbooks.splice(rbIndex, 1);
+          console.log('real delete....');
+        }
+      });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -39,6 +55,10 @@ export class RunbookComponent implements OnInit {
     const size = event.currentTarget.innerWidth;
     this.cols = this.runbookService.getColumns(size);
 
+  }
+
+  ngOnDestroy(): void {
+    this.deteleSubscription.unsubscribe();
   }
 
 

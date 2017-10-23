@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 import {Runbook, RunbookService} from '../runbook.service';
 import {YamlParserException} from 'app/runbook/yaml-parser-exception';
 import {HttpClient} from '@angular/common/http';
+import {ApiServer} from 'app/core/api-server';
 
 declare var ace: any;
 
@@ -17,12 +18,12 @@ export class RunbookDetailComponent implements OnInit {
   title: string;
   parseError: YamlParserException;
 
-  constructor(private runbookService: RunbookService, private element: ElementRef, private http: HttpClient) {
+  constructor(private runbookService: RunbookService, private element: ElementRef, private http: HttpClient, private apiServer: ApiServer) {
 
   }
 
   ngOnInit() {
-    this.http.post<Runbook>('http://localhost:8080/inventory/runbooks/empty', null).subscribe(data => {
+    this.http.post<Runbook>(this.apiServer.API_RUNBOOK + '/empty', null).subscribe(data => {
       this.runbook = data;
       this.editor.getSession().setValue(this.runbook.contentYaml, 0);
     });

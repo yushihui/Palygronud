@@ -1,12 +1,19 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Subject} from 'rxjs/Subject';
 
 declare var YAML: any;
 
 @Injectable()
 export class RunbookService {
 
-  constructor(private http: HttpClient) {
+  private runbookDeleteAction = new Subject<string>();
+  runbookDeleted$ = this.runbookDeleteAction.asObservable();
+
+  constructor() {
+  }
+
+  deleteRunbookFromList(id: string) {
+    this.runbookDeleteAction.next(id);
   }
 
   getEmptyRunbook(): Runbook {
