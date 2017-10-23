@@ -5,7 +5,7 @@
   </div>
   <div class="runbook-body">
     <div class="rb-top">
-      <span class="rr-l">Recent runbooks</span>
+      <span class="rr-l">Recent runbooks ({{runbooks && runbooks.length}})</span>
       <button mat-button class="p-r">
         <mat-icon aria-label="View in list">view_list</mat-icon>
       </button>
@@ -14,7 +14,7 @@
       </button>
     </div>
     <div>
-      <mat-grid-list cols="4" rowHeight="260px">
+      <mat-grid-list [cols]="cols" rowHeight="260px" gutterSize="5">
         <mat-grid-tile
           *ngFor="let runbook of runbooks"
           [colspan]="1">
@@ -22,6 +22,8 @@
           </wzz-runbook-card>
         </mat-grid-tile>
       </mat-grid-list>
+
+      <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
     </div>
   </div>
 

@@ -14,6 +14,20 @@ export class RunbookService {
     return new Runbook();
   }
 
+  getColumns(size: number): number {
+    let cols = 4;
+    if (size >= 1200) {
+      cols = 4;
+    } else if (size >= 960) {
+      cols = 3;
+    } else if (size >= 768) {
+      cols = 2;
+    } else {
+      cols = 1;
+    }
+    return cols;
+  }
+
   parseYaml2Runbook(yamlString: string, runbook: Runbook): void {
     try {
       const rbJson: any = YAML.parse(yamlString);
