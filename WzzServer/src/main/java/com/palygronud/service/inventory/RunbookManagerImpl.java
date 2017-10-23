@@ -45,6 +45,7 @@ public class RunbookManagerImpl implements RunbookManager {
     @Override
     public void deleteRunbook(String runbookId) {
 
+        runbookRepository.delete(runbookId);
 
     }
 

@@ -1,13 +1,11 @@
 package com.palygronud.web.inventory;
 
+import com.palygronud.domain.inventory.Device;
 import com.palygronud.domain.inventory.Runbook;
 import com.palygronud.service.inventory.RunbookManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,5 +31,13 @@ public class RunbookController {
     @RequestMapping(method = RequestMethod.GET, value = "")
     public List<Runbook> getAllRunbooks() {
         return runbookManager.getAllRunbooks();
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(method = RequestMethod.DELETE, value = "{id}")
+    //TODO
+    public boolean deleteRunbook(@PathVariable String id) {
+        runbookManager.deleteRunbook(id);
+        return true;
     }
 }
