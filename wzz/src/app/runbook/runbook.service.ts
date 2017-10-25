@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
+import {Router} from '@angular/router';
 
 declare var YAML: any;
 
@@ -9,7 +10,12 @@ export class RunbookService {
   private runbookDeleteAction = new Subject<string>();
   runbookDeleted$ = this.runbookDeleteAction.asObservable();
 
-  constructor() {
+  constructor(private router: Router) {
+  }
+
+  gotoRunbookDetail(runbookId: string) {
+    // this.router.navigate(['detail/' + runbookId], {relativeTo: this.route});
+    this.router.navigate(['/runbooks/detail/' + runbookId]);
   }
 
   deleteRunbookFromList(id: string) {

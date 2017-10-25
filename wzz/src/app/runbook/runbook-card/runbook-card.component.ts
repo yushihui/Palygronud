@@ -19,8 +19,8 @@ export class RunbookCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  gotoDetails(): void {
-
+  open(runbookId: string): void {
+    this.runbookService.gotoRunbookDetail(runbookId);
   }
 
   delete(id: string): void {
@@ -28,5 +28,6 @@ export class RunbookCardComponent implements OnInit {
       this.runbookService.deleteRunbookFromList(id);
     });
   }
+
 
 }

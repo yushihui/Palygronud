@@ -20,13 +20,13 @@ export class RunbookComponent implements OnInit, OnDestroy {
   loading = true;
   deteleSubscription: Subscription;
 
-  constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient, private runbookService: RunbookService,
+  constructor(private http: HttpClient, private runbookService: RunbookService,
               private apiServer: ApiServer) {
     this.cols = this.runbookService.getColumns(window.innerWidth);
   }
 
   gotoRunbookDetail(runbookId: string) {
-    this.router.navigate(['detail/' + runbookId], {relativeTo: this.route});
+    this.runbookService.gotoRunbookDetail(runbookId);
   }
 
   ngOnInit() {
