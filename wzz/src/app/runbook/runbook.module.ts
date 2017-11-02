@@ -6,7 +6,8 @@ import {RunbookCardComponent} from './runbook-card/runbook-card.component';
 import {RunbookDetailComponent} from './runbook-detail/runbook-detail.component';
 import {
   MatButtonModule, MatCardModule, MatGridListModule, MatIconModule, MatInputModule, MatProgressBarModule, MatRippleModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatStepperModule
 } from '@angular/material';
 import {RunbookService} from './runbook.service';
 import {HttpClientModule} from '@angular/common/http';

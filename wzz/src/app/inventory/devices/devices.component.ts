@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-devices',
+  selector: 'wzz-devices',
   templateUrl: './devices.component.html',
   styleUrls: ['./devices.component.css']
 })

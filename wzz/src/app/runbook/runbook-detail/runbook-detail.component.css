@@ -1,9 +1,11 @@
 .runbook-d-container {
   margin: 12px;
+  margin-top: 60px;
 }
 
 .yml-container {
-  width: 70%;
+  width: 60%;
+  display: inline-block;
 }
 
 .yml-editor {
@@ -14,9 +16,81 @@
   /*border: .5px solid #dbdbdb;*/
   border-radius: 5px;
   padding: 12px 12px;
-  width: 100%;
+  width: 98%;
 }
 
 .runbook-overview {
-  width: 30%;
+  width: 38%;
+  display: inline-block;
+}
+
+.runbook-tree {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 8px 0 0;
+  margin-left: 24px;
+}
+
+.runbook-tree > li {
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 25px;
+  padding: 3px 0 3px 12px;
+  position: relative;
+  transition: all .3s ease-in-out
+}
+
+.runbook-tree > li::before {
+  border-left: 1px solid #dbdbdb;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.runbook-tree a {
+  text-decoration: none;
+  color: #4d4c4c;
+}
+
+.runbook-tree > li:first-child::before {
+  top: 15px;
+}
+
+.runbook-tree > li:first-child::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 40%;
+  margin: 7px 0 4px 0;
+  background: #dbdbdb;
+  clear: both;
+}
+
+.runbook-tree > li > a::before {
+  content: "";
+  border-radius: 50%;
+  left: -3px;
+  top: 12px;
+  background: #dbdbdb;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+}
+
+.runbook-tree > li > a.active::before {
+  background: #1976d2;
+}
+
+.runbook-tree > li:hover > a {
+  color: #1976d2;
+}
+
+.runbook-tree > li:last-child:before {
+  bottom: calc(100% - 14px);
+}
+
+.runbook-tree > li:hover > a::before {
+  background: #1976d2;
 }

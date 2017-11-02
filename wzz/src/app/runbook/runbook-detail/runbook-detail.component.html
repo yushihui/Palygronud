@@ -4,12 +4,27 @@
     <div class="yml-editor">
     </div>
     <span *ngIf="parseError">{{parseError|parserExceptionPipe}}</span>
-    <span>{{runbook.contentYml}}</span>
+    <span>{{runbook.contentYaml}}</span>
     <span *ngIf="title">{{title}}</span>
   </div>
 
 
   <div class="runbook-overview">
+    <ul class="runbook-tree">
+      <li class="runbook-name"><a href="">Runbook Name</a></li>
+      <li class="node"><a href="">Benchmark</a></li>
+      <li class="node"><a href="">Network Change</a></li>
+      <li class="node">
+        <a href="">Benchmark</a>
+        <ul>
+          <li>Result 1</li>
+          <li>Result 2</li>
+        </ul>
+      </li>
+      <li class="node"><a href="">Compare</a></li>
+      <li class="node"><a href="">Summary</a></li>
+    </ul>
+    <a href=""></a>
 
   </div>
 </div>
