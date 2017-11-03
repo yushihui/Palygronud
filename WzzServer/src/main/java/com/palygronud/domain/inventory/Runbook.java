@@ -20,11 +20,11 @@ public class Runbook {
 
     @Id
     private String id;
-    private String createdBy, contentYaml;
+    private String name, createdBy, contentYaml;
     private Date createdTime;
     private List<String> tags;
     private LastOpInfo lastOpInfo;
-    // private List<RunbookNode> nodes;
+    private List<RunbookNode> nodes;
     private String description;
     private RunbookShareType shareType;
 

@@ -11,6 +11,6 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public class RunbookNode {
-    private String name;
-    private String provider;
+    private final String name;
+    private final String provider;
 }
