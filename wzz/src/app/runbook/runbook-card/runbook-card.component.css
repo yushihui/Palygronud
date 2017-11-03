@@ -1,3 +1,24 @@
 mat-card {
   max-width: 300px;
+  height: 260px;
+  min-width: 260px;
+}
+
+mat-card-content {
+  height: 225px;
+}
+
+mat-card-actions {
+  border-top: 1px solid #e2e2e2;
+}
+
+.LA-T {
+  line-height: 25px;
+  font-size: 12px;
+  font-weight: lighter;
+  color: #7d7d7d;
+}
+
+.action {
+  margin-top: -6px;
 }
