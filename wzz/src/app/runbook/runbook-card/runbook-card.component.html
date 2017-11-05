@@ -17,6 +17,10 @@
         <mat-icon aria-label="Open the runbook">open_in_new</mat-icon>
         <span>Open</span>
       </button>
+      <button mat-menu-item (click)="share(runbook.id)">
+        <mat-icon aria-label="Share the runbook">share</mat-icon>
+        <span>Share to</span>
+      </button>
       <button mat-menu-item (click)="delete(runbook.id)">
         <mat-icon aria-label="Delete Runbook">delete</mat-icon>
         <span>Delete</span>
