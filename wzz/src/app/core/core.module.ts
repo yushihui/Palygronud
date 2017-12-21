@@ -6,13 +6,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SideNavComponent} from './side-nav/side-nav.component';
 import {NavService} from './nav.service';
 import {ApiServer} from 'app/core/api-server';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule, // we use ngFor
     MatListModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule
   ],
   exports: [NavComponent, SideNavComponent],
   declarations: [NavComponent, SideNavComponent],

@@ -1,1 +1,2 @@
-<a class="wzz-nav-link " (click)="gotoDetail(menu)" [ngClass]="{'active': menu.active}" *ngFor="let menu of menuItems">{{menu.name}}</a>
+<a class="wzz-nav-link " routerLink="{{menu.url}}" routerLinkActive="active" [ngClass]="{'active': menu.active}"
+   *ngFor="let menu of menuItems">{{menu.name}}</a>
