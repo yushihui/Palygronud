@@ -11,3 +11,7 @@
   margin-left: 60px;
   cursor: pointer;
 }
+
+a.active {
+  border-bottom-color: yellow;
+}

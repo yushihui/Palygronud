@@ -11,6 +11,10 @@ const appRoutes: Routes = [
   {
     path: 'runbooks',
     loadChildren: 'app/runbook/runbook.module#RunbookModule'
+  },
+  {
+    path: 'inventory/devices',
+    loadChildren: 'app/inventory/devices/devices.module#DevicesModule'
   }
   // {
   //   path: 'inventory/devices',

@@ -42,6 +42,10 @@ label::after {
   clear: both;
 }
 
+mat-icon {
+  float: right;
+}
+
 .runbook-tree > li > a::before {
   content: "";
   border-radius: 50%;

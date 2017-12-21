@@ -21,6 +21,13 @@ export class NavComponent implements OnInit {
   }
 
   gotoDetail(menu: MenuItem) {
+    for (let i = 0; i < this.menuItems.length; i++) {
+      if (this.menuItems[i].name === menu.name) {
+        this.menuItems[i].active = true;
+      } else {
+        this.menuItems[i].active = false;
+      }
+    }
     this.router.navigate(['../' + menu.url], {relativeTo: this.route});
   }
 }

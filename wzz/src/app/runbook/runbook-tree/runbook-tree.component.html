@@ -1,5 +1,8 @@
 <div>
-  <label>{{runbook.name}}</label>
+  <label>{{runbook.name}}
+    <mat-icon color="{{color.color}}">{{color.name}}</mat-icon>
+  </label>
+
   <ul class="runbook-tree">
     <li class="node" *ngFor="let node of runbook.nodes"><a href="">{{node.name}}</a></li>
   </ul>

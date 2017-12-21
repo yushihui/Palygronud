@@ -8,9 +8,9 @@ export class NavService {
 
   getMenus(): MenuItem[] {
     const menus: MenuItem[] = [
-      {name: 'Runbook', url: 'runbooks'},
-      {name: 'Inventory', url: 'inventory/devices'},
-      {name: 'Map', url: 'maps'},
+      {name: 'Runbook', url: 'runbooks', active: false},
+      {name: 'Inventory', url: 'inventory/devices', active: false},
+      {name: 'Map', url: 'maps', active: false},
     ];
     return menus;
   }
@@ -19,6 +19,6 @@ export class NavService {
 
 
 export class MenuItem {
-  constructor(public name: string, public url: string) {
+  constructor(public name: string, public url: string, public active: boolean) {
   }
 }
