@@ -7,23 +7,23 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CoreModule} from './core/core.module';
 import {WzzComponent} from './wzz.component';
 import {WzzRoutingModule} from './wzz-routing.module';
+import {PageNotFoundComponent} from './page-not-found.component';
 
 
 @NgModule({
   declarations: [
-    WzzComponent
+    WzzComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
     BrowserAnimationsModule,
     CoreModule,
     WzzRoutingModule
-
   ],
   providers: [],
   bootstrap: [WzzComponent]

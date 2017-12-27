@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {PageNotFoundComponent} from './page-not-found.component';
 
 
 const appRoutes: Routes = [
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
   {
     path: 'inventory/devices',
     loadChildren: 'app/inventory/devices/devices.module#DevicesModule'
-  }
+  },
+  {path: '**', component: PageNotFoundComponent}
   // {
   //   path: 'inventory/devices',
   //   loadChildren: 'app/crisis-center/crisis-center.module#CrisisCenterModule',
