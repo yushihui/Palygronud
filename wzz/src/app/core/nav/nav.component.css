@@ -14,4 +14,5 @@
 
 a.active {
   border-bottom-color: yellow;
+  padding-bottom: 6px;
 }

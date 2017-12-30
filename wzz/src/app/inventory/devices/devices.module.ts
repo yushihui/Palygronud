@@ -4,11 +4,13 @@ import {CommonModule} from '@angular/common';
 import {DevicesRoutingModule} from './devices-routing.module';
 import {DevicesComponent} from './devices.component';
 import {DeviceDetailComponent} from './device-detail/device-detail.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    DevicesRoutingModule
+    DevicesRoutingModule,
+    HttpClientModule
   ],
   declarations: [DevicesComponent, DeviceDetailComponent]
 })

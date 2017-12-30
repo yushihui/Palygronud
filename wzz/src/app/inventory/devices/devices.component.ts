@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {ApiServer} from '../../core/api-server';
 
 @Component({
   selector: 'wzz-devices',
@@ -7,10 +9,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DevicesComponent implements OnInit {
 
-  constructor() {
+  constructor(private http: HttpClient,
+              private apiServer: ApiServer) {
   }
 
   ngOnInit() {
+    this.http.get(this.apiServer.API_DEVICE).subscribe(dvs => {
+
+    });
   }
 
 }

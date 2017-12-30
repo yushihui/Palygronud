@@ -17,9 +17,29 @@ mat-card-actions {
   font-size: 12px;
   font-weight: lighter;
   color: #7d7d7d;
+  vertical-align: middle;
+  height: 44px;
+  display: inline-block;
 }
 
 .action {
   margin-top: -6px;
   margin-right: -6px
+}
+
+.avtar {
+  display: inline-block;
+
+}
+
+.author {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.author::before {
+  content: url(https://lh3.googleusercontent.com/-XjdKL3tcsUY/AAAAAAAAAAI/AAAAAAAAAAA/AA6ZPT782qTxp5cRj-g59eImbN_rV83r3A/s32-c-mo/photo.jpg);
 }

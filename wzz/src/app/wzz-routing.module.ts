@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from './page-not-found.component';
+import {HomeComponent} from './home/home.component';
 
 
 const appRoutes: Routes = [
-  // {
-  //   path: 'compose',
-  //   component: ComposeMessageComponent,
-  //   outlet: 'popup'
-  // },
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: 'runbooks',
     loadChildren: 'app/runbook/runbook.module#RunbookModule'

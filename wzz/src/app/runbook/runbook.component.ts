@@ -1,8 +1,6 @@
 import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
 import {Runbook, RunbookService} from './runbook.service';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
 import {ApiServer} from '../core/api-server';
 import {Subscription} from 'rxjs/Subscription';
 

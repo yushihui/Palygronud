@@ -8,7 +8,13 @@
     <wzz-runbook-tree [runbook]="runbook"></wzz-runbook-tree>
   </mat-card-content>
   <mat-card-actions>
-    <span class="LA-T">Modified {{runbook.lastOpInfo.time | date}}</span>
+    <div class="avtar">
+      <span class="LA-T">Modified {{runbook.lastOpInfo.time | date}}</span>
+      <span class="author"></span>
+
+    </div>
+
+
     <button mat-icon-button [matMenuTriggerFor]="menu" class="p-r action">
       <mat-icon>more_vert</mat-icon>
     </button>
