@@ -24,8 +24,10 @@ public class Device {
     private boolean isIPSLA;
     private boolean isNetflow;
     private boolean isSNMPConfig;
+
     @Indexed
     private int mainType;
+
     @Indexed
     private int subType;
     private String mainTypeName;

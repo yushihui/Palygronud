@@ -3,15 +3,13 @@ package com.palygronud.web.inventory;
 import com.palygronud.domain.inventory.Device;
 import com.palygronud.domain.inventory.DevicevRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/inventory/devices")
+@CrossOrigin(origins = "http://localhost:4200")
 public class DeviceController {
 
 

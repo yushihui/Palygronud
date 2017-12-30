@@ -47,7 +47,8 @@ public class RunbookManagerImpl implements RunbookManager {
     private List<RunbookNode> getRndNodes() {
         List<RunbookNode> nodes = new ArrayList<>();
         Random r = new Random();
-        int size = r.ints(5, 7).findFirst().getAsInt();
+        int size = r.ints(5, 7
+        ).findFirst().getAsInt();
         for (int i = 0; i < size; i++) {
             int rnd = r.ints(0, 10).findFirst().getAsInt();
             nodes.add(new RunbookNode(NODES.get(rnd), ""));
