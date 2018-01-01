@@ -5,12 +5,16 @@ import {DevicesRoutingModule} from './devices-routing.module';
 import {DevicesComponent} from './devices.component';
 import {DeviceDetailComponent} from './device-detail/device-detail.component';
 import {HttpClientModule} from '@angular/common/http';
+import {MatPaginatorModule, MatSortModule, MatTableModule} from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
     DevicesRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
   ],
   declarations: [DevicesComponent, DeviceDetailComponent]
 })

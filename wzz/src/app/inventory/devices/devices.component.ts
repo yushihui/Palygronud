@@ -1,6 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ApiServer} from '../../core/api-server';
+import {Device} from './devices.service';
+import 'rxjs/add/observable/of';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'wzz-devices',
@@ -9,14 +12,22 @@ import {ApiServer} from '../../core/api-server';
 })
 export class DevicesComponent implements OnInit {
 
+  public deviceDataSource: MatTableDataSource<Device>;
+  displayedColumns = ['name', 'mgmtIP', 'mainTypeName'];
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
   constructor(private http: HttpClient,
               private apiServer: ApiServer) {
   }
 
   ngOnInit() {
-    this.http.get(this.apiServer.API_DEVICE).subscribe(dvs => {
-
+    this.http.get<Device[]>(this.apiServer.API_DEVICE).subscribe(dvs => {
+      this.deviceDataSource = new MatTableDataSource<Device>(dvs);
+      this.deviceDataSource.paginator = this.paginator;
+      this.deviceDataSource.sort = this.sort;
     });
   }
+
 
 }
