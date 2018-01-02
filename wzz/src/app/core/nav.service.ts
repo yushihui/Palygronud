@@ -11,6 +11,7 @@ export class NavService {
       {name: 'Runbook', url: 'runbooks', active: false},
       {name: 'Inventory', url: 'inventory/devices', active: false},
       {name: 'Map', url: 'maps', active: false},
+      {name: 'Monitor', url: 'monitors', active: false},
     ];
     return menus;
   }

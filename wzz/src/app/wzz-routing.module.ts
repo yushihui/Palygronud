@@ -17,6 +17,14 @@ const appRoutes: Routes = [
     path: 'inventory/devices',
     loadChildren: 'app/inventory/devices/devices.module#DevicesModule'
   },
+  {
+    path: 'maps',
+    loadChildren: 'app/map/map.module#MapModule'
+  },
+  {
+    path: 'monitors',
+    loadChildren: 'app/monitor/monitor.module#MonitorModule'
+  },
   {path: '**', component: PageNotFoundComponent}
   // {
   //   path: 'inventory/devices',
