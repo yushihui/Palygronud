@@ -3,3 +3,17 @@
   margin-top: 60px;
   margin-right: 12px;
 }
+
+div.row {
+  display: flex;
+}
+
+div.graph {
+  flex: 0 0 60%;
+  display: inline-block;
+}
+
+div.device-table {
+  flex: 0 0 40%;
+  display: inline-block;
+}
