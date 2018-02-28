@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import {Router} from '@angular/router';
+import * as d3 from 'd3';
 
 declare var YAML: any;
 
@@ -64,10 +65,16 @@ export class Runbook {
   public contentYaml: string;
   public tags: string[];
   public description: string;
+  public lastOpInfo: OpInfo;
 
   constructor() {
   }
 
+}
+
+export class OpInfo {
+  public time: Date;
+  public userName: string;
 }
 
 export class RunbookNode {

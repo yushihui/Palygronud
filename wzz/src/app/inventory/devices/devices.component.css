@@ -17,3 +17,7 @@ div.device-table {
   flex: 0 0 40%;
   display: inline-block;
 }
+
+.mat-cell {
+  font-size: 12px;
+}

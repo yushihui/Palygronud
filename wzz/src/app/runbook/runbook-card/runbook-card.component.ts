@@ -29,5 +29,8 @@ export class RunbookCardComponent implements OnInit {
     });
   }
 
+  share(id: string): void {
+
+  }
 
 }

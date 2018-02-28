@@ -8,6 +8,7 @@ import {WzzComponent} from './wzz.component';
 import {WzzRoutingModule} from './wzz-routing.module';
 import {PageNotFoundComponent} from './page-not-found.component';
 import {HomeComponent} from './home/home.component';
+import {SharedModule} from './shared/shared.module';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {HomeComponent} from './home/home.component';
     BrowserAnimationsModule,
     CoreModule,
     WzzRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [WzzComponent]
