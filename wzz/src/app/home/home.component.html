@@ -1,5 +1,11 @@
 <div class="home">
 
+  <mat-grid-list [cols]="4" rowHeight="320px" gutterSize="5">
+    <mat-grid-tile
+      *ngFor="let scoreBoard of scoreBoards"
+      [colspan]="1">
+      <wzz-score-board [scoreBoard]="scoreBoard"></wzz-score-board>
+    </mat-grid-tile>
+  </mat-grid-list>
 
-  <wzz-score-board [title]="Runbook" [score]="500" [summary]="some"></wzz-score-board>
 </div>

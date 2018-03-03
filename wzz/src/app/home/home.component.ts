@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {ScoreBoard} from '../shared/score-board/score-board.component';
+import {HomeService} from './home.service';
 
 @Component({
   selector: 'wzz-home',
@@ -7,7 +9,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() {
+  public scoreBoards: ScoreBoard[];
+
+  constructor(private homeService: HomeService) {
+    this.scoreBoards = this.homeService.getScoreBoards();
   }
 
   ngOnInit() {

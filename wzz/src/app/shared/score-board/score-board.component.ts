@@ -7,15 +7,26 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ScoreBoardComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() score: string;
-  @Input() summary: string;
-  @Input() detail: string;
+  @Input() scoreBoard: ScoreBoard;
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+}
+
+
+export class ScoreBoard {
+
+  public title: string;
+  public score: string;
+  public summary: string;
+  public detail: string;
+
+
+  constructor() {
   }
 
 }
