@@ -17,7 +17,7 @@ export class HomeService {
     dBoard.detail = '';
     dBoard.title = 'Devices';
     dBoard.summary = '';
-    dBoard.score = '10000';
+    dBoard.score = '10 K';
     result.push(dBoard);
 
     // create  monitors board

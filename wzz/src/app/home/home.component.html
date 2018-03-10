@@ -1,11 +1,31 @@
-<div class="home">
+<div class="home" fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxFlexFill>
+  <div class="dash-board" fxFlex="75">
+    <mat-grid-list [cols]="4" rowHeight="320px" gutterSize="5">
+      <mat-grid-tile
+        *ngFor="let scoreBoard of scoreBoards"
+        [colspan]="1">
+        <wzz-score-board [scoreBoard]="scoreBoard"></wzz-score-board>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 
-  <mat-grid-list [cols]="4" rowHeight="320px" gutterSize="5">
-    <mat-grid-tile
-      *ngFor="let scoreBoard of scoreBoards"
-      [colspan]="1">
-      <wzz-score-board [scoreBoard]="scoreBoard"></wzz-score-board>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="event-log" fxFlex="25">
+    <mat-tab-group>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>notifications</mat-icon>
+        </ng-template>
+        <h1>Some tab content</h1>
+        <p>...</p>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>event_note</mat-icon>
+        </ng-template>
+        <h1>Some more tab content</h1>
+        <p>...</p>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
 
 </div>
