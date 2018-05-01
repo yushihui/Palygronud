@@ -7,7 +7,6 @@ declare var YAML: any;
 
 @Injectable()
 export class RunbookService {
-
   private runbookDeleteAction = new Subject<string>();
   runbookDeleted$ = this.runbookDeleteAction.asObservable();
 
@@ -24,7 +23,6 @@ export class RunbookService {
   }
 
   getEmptyRunbook(): Runbook {
-
     return new Runbook();
   }
 
@@ -52,7 +50,6 @@ export class RunbookService {
       throw e;
     }
   }
-
 }
 
 export class Runbook {
@@ -69,7 +66,6 @@ export class Runbook {
 
   constructor() {
   }
-
 }
 
 export class OpInfo {
@@ -78,12 +74,9 @@ export class OpInfo {
 }
 
 export class RunbookNode {
-  constructor(public name: string,
-              public provider: string) {
+  constructor(public name: string, public provider: string) {
   }
-
 }
-
 
 export enum TaskType {
   CLI,

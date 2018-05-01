@@ -6,6 +6,9 @@
   <!--</mat-card-header>-->
   <mat-card-content>
     <wzz-runbook-tree [runbook]="runbook"></wzz-runbook-tree>
+    <div class="rb-des">
+      test description
+    </div>
   </mat-card-content>
   <mat-card-actions>
     <div class="avtar">
@@ -26,6 +29,10 @@
       <button mat-menu-item (click)="share(runbook.id)">
         <mat-icon aria-label="Share the runbook">share</mat-icon>
         <span>Share to</span>
+      </button>
+      <button mat-menu-item (click)="share(runbook.id)">
+        <mat-icon aria-label="Subscribe">hearing</mat-icon>
+        <span>Subscribe</span>
       </button>
       <button mat-menu-item (click)="delete(runbook.id)">
         <mat-icon aria-label="Delete Runbook">delete</mat-icon>

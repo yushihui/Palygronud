@@ -5,7 +5,7 @@
   </div>
   <div class="runbook-body">
     <div class="rb-top">
-      <span class="rr-l">Recent runbooks ({{runbooks && runbooks.length}})</span>
+      <span class="rr-l">Recent playbooks ({{runbooks && runbooks.length}})</span>
       <button mat-button class="p-r">
         <mat-icon aria-label="View in list">view_list</mat-icon>
       </button>
@@ -17,7 +17,8 @@
       <mat-grid-list [cols]="cols" rowHeight="320px" gutterSize="5">
         <mat-grid-tile
           *ngFor="let runbook of runbooks"
-          [colspan]="1">
+          [colspan]="1"
+          [@flyInOut]="'in'">
           <wzz-runbook-card [runbook]="runbook">
           </wzz-runbook-card>
         </mat-grid-tile>
@@ -30,7 +31,7 @@
 
   <div class="add-rb">
     <button mat-fab color="accent">
-      <mat-icon aria-label="add a runbook" (click)="gotoRunbookDetail('0')">add</mat-icon>
+      <mat-icon aria-label="add a playbook" (click)="gotoRunbookDetail('0')">add</mat-icon>
     </button>
   </div>
 </div>

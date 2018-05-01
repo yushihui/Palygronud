@@ -9,11 +9,11 @@ import {ApiServer} from '../../core/api-server';
   styleUrls: ['./runbook-card.component.css']
 })
 export class RunbookCardComponent implements OnInit {
-
   @Input() runbook: Runbook;
 
-
-  constructor(private http: HttpClient, private apiServer: ApiServer, private runbookService: RunbookService) {
+  constructor(private http: HttpClient,
+              private apiServer: ApiServer,
+              private runbookService: RunbookService) {
   }
 
   ngOnInit() {
@@ -30,7 +30,5 @@ export class RunbookCardComponent implements OnInit {
   }
 
   share(id: string): void {
-
   }
-
 }

@@ -6,11 +6,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./monitors.component.css']
 })
 export class MonitorsComponent implements OnInit {
-
   constructor() {
   }
 
   ngOnInit() {
   }
-
 }

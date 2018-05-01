@@ -4,7 +4,11 @@ import {HomeComponent} from './home.component';
 import {HomeService} from './home.service';
 import {SharedModule} from '../shared/shared.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatGridListModule, MatIconModule, MatTabsModule} from '@angular/material';
+import {
+  MatGridListModule,
+  MatIconModule,
+  MatTabsModule
+} from '@angular/material';
 
 @NgModule({
   imports: [

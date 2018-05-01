@@ -9,7 +9,10 @@ describe('HomeService', () => {
     });
   });
 
-  it('should be created', inject([HomeService], (service: HomeService) => {
-    expect(service).toBeTruthy();
-  }));
+  it(
+    'should be created',
+    inject([HomeService], (service: HomeService) => {
+      expect(service).toBeTruthy();
+    })
+  );
 });

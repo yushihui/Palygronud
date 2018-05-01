@@ -11,14 +11,13 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
   styleUrls: ['./devices.component.css']
 })
 export class DevicesComponent implements OnInit {
-
   public deviceDataSource: MatTableDataSource<Device>;
   displayedColumns = ['name', 'mgmtIP', 'mainTypeName'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  constructor(private http: HttpClient,
-              private apiServer: ApiServer) {
+
+  constructor(private http: HttpClient, private apiServer: ApiServer) {
   }
 
   ngOnInit() {
@@ -28,6 +27,4 @@ export class DevicesComponent implements OnInit {
       this.deviceDataSource.sort = this.sort;
     });
   }
-
-
 }

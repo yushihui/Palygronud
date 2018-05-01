@@ -5,7 +5,11 @@ import {DevicesRoutingModule} from './devices-routing.module';
 import {DevicesComponent} from './devices.component';
 import {DeviceDetailComponent} from './device-detail/device-detail.component';
 import {HttpClientModule} from '@angular/common/http';
-import {MatPaginatorModule, MatSortModule, MatTableModule} from '@angular/material';
+import {
+  MatPaginatorModule,
+  MatSortModule,
+  MatTableModule
+} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -14,7 +18,7 @@ import {MatPaginatorModule, MatSortModule, MatTableModule} from '@angular/materi
     HttpClientModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule,
+    MatTableModule
   ],
   declarations: [DevicesComponent, DeviceDetailComponent]
 })

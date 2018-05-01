@@ -7,7 +7,6 @@ import {Runbook} from '../runbook.service';
   styleUrls: ['./runbook-tree.component.css']
 })
 export class RunbookTreeComponent implements OnInit {
-
   @Input() runbook: Runbook;
   color: any;
   count: number;
@@ -24,5 +23,4 @@ export class RunbookTreeComponent implements OnInit {
     ];
     this.color = availableColors[Math.floor(Math.random() * 4)];
   }
-
 }

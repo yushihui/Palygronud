@@ -4,8 +4,24 @@ mat-card {
   min-width: 260px;
 }
 
+mat-card:hover {
+
+  border: solid 1px #1976d2;
+}
+
 mat-card-content {
   height: 225px;
+}
+
+mat-card-content .rb-des {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%
 }
 
 mat-card-actions {

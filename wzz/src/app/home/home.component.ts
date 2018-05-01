@@ -8,7 +8,6 @@ import {HomeService} from './home.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   public scoreBoards: ScoreBoard[];
 
   constructor(private homeService: HomeService) {
@@ -17,5 +16,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

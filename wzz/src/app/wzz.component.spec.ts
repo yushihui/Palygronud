@@ -1,13 +1,11 @@
-import { TestBed, async } from '@angular/core/testing';
+import {TestBed, async} from '@angular/core/testing';
 
 import {WzzComponent} from './wzz.component';
 
 describe('WzzComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        WzzComponent
-      ],
+      declarations: [WzzComponent]
     }).compileComponents();
   }));
 

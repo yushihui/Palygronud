@@ -6,11 +6,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./maps.component.css']
 })
 export class MapsComponent implements OnInit {
-
   constructor() {
   }
 
   ngOnInit() {
   }
-
 }

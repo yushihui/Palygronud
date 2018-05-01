@@ -7,7 +7,6 @@ import {ActivatedRoute} from '@angular/router';
 
 declare var ace: any;
 
-
 @Component({
   selector: 'wzz-runbook-detail',
   templateUrl: './runbook-detail.component.html',
@@ -19,9 +18,11 @@ export class RunbookDetailComponent implements OnInit {
   title: string;
   parseError: YamlParserException;
 
-  constructor(private runbookService: RunbookService, private route: ActivatedRoute,
-              private element: ElementRef, private http: HttpClient, private apiServer: ApiServer) {
-
+  constructor(private runbookService: RunbookService,
+              private route: ActivatedRoute,
+              private element: ElementRef,
+              private http: HttpClient,
+              private apiServer: ApiServer) {
   }
 
   ngOnInit() {
@@ -37,17 +38,15 @@ export class RunbookDetailComponent implements OnInit {
   }
 
   createEmptyRunbook(): void {
-    this.http.post<Runbook>(this.apiServer.API_RUNBOOK + '/empty', null).subscribe(data => {
-      this.runbook = data;
-      this.editor.getSession().setValue(this.runbook.contentYaml, 0);
-    });
+    this.http
+      .post<Runbook>(this.apiServer.API_RUNBOOK + '/empty', null)
+      .subscribe(data => {
+        this.runbook = data;
+        this.editor.getSession().setValue(this.runbook.contentYaml, 0);
+      });
   }
 
   parseYaml(): void {
     const yamlString: string = this.editor.getValue();
-
-
   }
-
-
 }

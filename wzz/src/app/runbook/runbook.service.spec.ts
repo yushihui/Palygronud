@@ -9,7 +9,10 @@ describe('RunbookService', () => {
     });
   });
 
-  it('should be created', inject([RunbookService], (service: RunbookService) => {
-    expect(service).toBeTruthy();
-  }));
+  it(
+    'should be created',
+    inject([RunbookService], (service: RunbookService) => {
+      expect(service).toBeTruthy();
+    })
+  );
 });

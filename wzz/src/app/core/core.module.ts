@@ -8,7 +8,6 @@ import {NavService} from './nav.service';
 import {ApiServer} from 'app/core/api-server';
 import {RouterModule} from '@angular/router';
 
-
 @NgModule({
   imports: [
     CommonModule, // we use ngFor
