@@ -2,7 +2,7 @@ import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
 import {Runbook, RunbookService} from './runbook.service';
 import {HttpClient} from '@angular/common/http';
 import {ApiServer} from '../core/api-server';
-import {Subscription} from 'rxjs/Subscription';
+
 import {
   trigger,
   state,
@@ -10,6 +10,7 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import {Subscription} from "rxjs/index";
 
 @Component({
   selector: 'wzz-runbook',

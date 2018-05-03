@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {Subject} from 'rxjs/Subject';
 import {Router} from '@angular/router';
 import * as d3 from 'd3';
+import {Subject} from "rxjs/index";
 
 declare var YAML: any;
 

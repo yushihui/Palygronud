@@ -1,8 +1,7 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ApiServer} from '../../core/api-server';
 import {Device} from './devices.service';
-import 'rxjs/add/observable/of';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 @Component({
