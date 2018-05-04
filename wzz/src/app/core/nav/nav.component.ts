@@ -13,8 +13,6 @@ export class NavComponent implements OnInit {
   }
 
 
-
-
   constructor(private navService: NavService) {
     this.menuItems = this.navService.getMenus();
   }
