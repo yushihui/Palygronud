@@ -25,7 +25,7 @@ public class AnsibleModule {
     private String author;
     private String desc,sDesc;
     private String extends_Module; //extends_documentation_fragment
-    private String note;
+    private String notes;
     private String example;
     private String expectReturn;
 }
