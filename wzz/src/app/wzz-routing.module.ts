@@ -3,11 +3,10 @@ import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from './page-not-found.component';
 import {HomeComponent} from './home/home.component';
 
-
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: HomeComponent
   },
   {
     path: 'runbooks',
@@ -37,18 +36,12 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      {
-        enableTracing: true, // <-- debugging purposes only
-        // preloadingStrategy: SelectivePreloadingStrategy,
-
-      }
-    )
+    RouterModule.forRoot(appRoutes, {
+      enableTracing: true // <-- debugging purposes only
+      // preloadingStrategy: SelectivePreloadingStrategy,
+    })
   ],
-  exports: [
-    RouterModule
-  ],
+  exports: [RouterModule],
   providers: []
 })
 export class WzzRoutingModule {

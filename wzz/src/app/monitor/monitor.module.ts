@@ -5,10 +5,7 @@ import {MonitorRoutingModule} from './monitor-routing.module';
 import {MonitorsComponent} from './monitors.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MonitorRoutingModule
-  ],
+  imports: [CommonModule, MonitorRoutingModule],
   declarations: [MonitorsComponent]
 })
 export class MonitorModule {

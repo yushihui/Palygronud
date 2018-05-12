@@ -1,16 +1,12 @@
 import {Injectable} from '@angular/core';
 import {ScoreBoard} from '../shared/score-board/score-board.component';
 
-
 @Injectable()
 export class HomeService {
-
   constructor() {
   }
 
-
   getScoreBoards(): ScoreBoard[] {
-
     const result: Array<ScoreBoard> = [];
     // create devices board
     const dBoard: ScoreBoard = new ScoreBoard();
@@ -46,5 +42,4 @@ export class HomeService {
 
     return result;
   }
-
 }

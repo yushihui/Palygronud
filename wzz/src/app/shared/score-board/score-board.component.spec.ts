@@ -9,8 +9,7 @@ describe('ScoreBoardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ScoreBoardComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

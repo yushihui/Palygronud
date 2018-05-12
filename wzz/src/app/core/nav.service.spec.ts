@@ -1,15 +1,18 @@
 import {TestBed, inject} from '@angular/core/testing';
 
-import {CoreService} from './nav.service';
+import {NavService} from './nav.service';
 
 describe('CoreService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [CoreService]
+      providers: [NavService]
     });
   });
 
-  it('should be created', inject([CoreService], (service: CoreService) => {
-    expect(service).toBeTruthy();
-  }));
+  it(
+    'should be created',
+    inject([NavService], (service: NavService) => {
+      expect(service).toBeTruthy();
+    })
+  );
 });

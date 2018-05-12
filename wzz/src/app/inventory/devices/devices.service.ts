@@ -2,10 +2,8 @@ import {Injectable} from '@angular/core';
 
 @Injectable()
 export class DevicesService {
-
   constructor() {
   }
-
 }
 
 export interface Device {

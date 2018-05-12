@@ -5,9 +5,9 @@ import {YamlParserException} from './yaml-parser-exception';
   name: 'parserExceptionPipe'
 })
 export class ParserExceptionPipePipe implements PipeTransform {
-
   transform(ype: YamlParserException, args?: any): string {
-    return 'Line: ' + ype.parsedLine + '; ' + ype.rawMessage + ' -- ' + ype.snippet;
+    return (
+      'Line: ' + ype.parsedLine + '; ' + ype.rawMessage + ' -- ' + ype.snippet
+    );
   }
-
 }

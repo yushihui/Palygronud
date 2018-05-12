@@ -4,7 +4,6 @@ import {FormsModule} from '@angular/forms';
 import {ScoreBoardComponent} from './score-board/score-board.component';
 import {MatCardModule} from '@angular/material';
 
-
 @NgModule({
   declarations: [ScoreBoardComponent],
   imports: [CommonModule, FormsModule, MatCardModule],

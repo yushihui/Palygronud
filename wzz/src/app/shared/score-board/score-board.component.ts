@@ -6,7 +6,6 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./score-board.component.css']
 })
 export class ScoreBoardComponent implements OnInit {
-
   @Input() scoreBoard: ScoreBoard;
 
   constructor() {
@@ -14,19 +13,14 @@ export class ScoreBoardComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
 
-
 export class ScoreBoard {
-
   public title: string;
   public score: string;
   public summary: string;
   public detail: string;
 
-
   constructor() {
   }
-
 }

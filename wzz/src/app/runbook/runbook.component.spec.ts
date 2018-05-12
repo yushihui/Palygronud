@@ -9,8 +9,7 @@ describe('RunbookComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [RunbookComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

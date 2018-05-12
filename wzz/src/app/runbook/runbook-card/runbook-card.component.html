@@ -1,20 +1,15 @@
 <mat-card class="runbook-card">
-  <!--<mat-card-header>-->
-  <!--<div mat-card-avatar class="example-header-image"></div>-->
-  <!--<mat-card-title>{{runbook.createdBy}}</mat-card-title>-->
-  <!--<mat-card-subtitle></mat-card-subtitle>-->
-  <!--</mat-card-header>-->
   <mat-card-content>
     <wzz-runbook-tree [runbook]="runbook"></wzz-runbook-tree>
+    <div class="rb-des">
+      test description
+    </div>
   </mat-card-content>
   <mat-card-actions>
     <div class="avtar">
       <span class="LA-T">Modified {{runbook.lastOpInfo.time | date}}</span>
       <span class="author"></span>
-
     </div>
-
-
     <button mat-icon-button [matMenuTriggerFor]="menu" class="p-r action">
       <mat-icon>more_vert</mat-icon>
     </button>
@@ -26,6 +21,10 @@
       <button mat-menu-item (click)="share(runbook.id)">
         <mat-icon aria-label="Share the runbook">share</mat-icon>
         <span>Share to</span>
+      </button>
+      <button mat-menu-item (click)="share(runbook.id)">
+        <mat-icon aria-label="Subscribe">hearing</mat-icon>
+        <span>Subscribe</span>
       </button>
       <button mat-menu-item (click)="delete(runbook.id)">
         <mat-icon aria-label="Delete Runbook">delete</mat-icon>

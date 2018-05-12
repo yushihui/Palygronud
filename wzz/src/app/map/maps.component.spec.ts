@@ -9,8 +9,7 @@ describe('MapsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [MapsComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

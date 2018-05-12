@@ -17,14 +17,14 @@ export class Node implements d3.SimulationNodeDatum {
 
   normal = () => {
     return 0;
-  }
+  };
 
   get r() {
     return 50 * this.normal() + 10;
   }
 
   get fontSize() {
-    return (30 * this.normal() + 10) + 'px';
+    return 30 * this.normal() + 10 + 'px';
   }
 
   get color() {

@@ -213,7 +213,11 @@
       if (typeof value == "number")
         return value == Infinity
           ? ".Inf"
-          : value == -Infinity ? "-.Inf" : isNaN(value) ? ".NAN" : value;
+          : value == -Infinity
+            ? "-.Inf"
+            : isNaN(value)
+              ? ".NAN"
+              : value;
       var yaml = new YamlEscaper();
       if (yaml.requiresDoubleQuoting(value))
         return yaml.escapeWithDoubleQuotes(value);
@@ -426,7 +430,9 @@
         cast = parseInt(scalar);
         return "0" == scalar.charAt(0)
           ? this.octdec(scalar)
-          : "" + raw == "" + cast ? cast : raw;
+          : "" + raw == "" + cast
+            ? cast
+            : raw;
       }
       if ("true" == (scalar + "").toLowerCase()) return true;
       if ("false" == (scalar + "").toLowerCase()) return false;
@@ -635,7 +641,9 @@
         k[0] =
           k[0] >= 0 && k[0] <= 69
             ? "20" + (k[0] < 10 ? "0" + k[0] : k[0] + "")
-            : k[0] >= 70 && k[0] <= 99 ? "19" + k[0] : k[0] + "";
+            : k[0] >= 70 && k[0] <= 99
+            ? "19" + k[0]
+            : k[0] + "";
         return parseInt(
           this.strtotime(k[2] + " " + k[1] + " " + k[0] + " " + g[2]) +
           (g[4] ? g[4] : ""),
